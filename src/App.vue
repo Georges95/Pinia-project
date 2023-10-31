@@ -1,36 +1,41 @@
 <script setup>
-import Header from '@/components/Header.vue'
+
+import Headers from '@/components/Headers.vue'
 import Sidebar from './components/Sidebar.vue'
 import ProjectList from './components/ProjectList.vue'
-import Form from './components/Form.vue'
+import Forms from './components/Forms.vue'
 
 
 </script>
 
 <template>
     <main>
-      <Header/>
+        
+      <Headers/>
 
-<div class="container-fluid">
-  <div class="row">
-    <Sidebar/>
+        <div class="container-fluid">
+          <div class="row">
+            <Sidebar/> 
+            
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Mes Projets</h1>
-      </div>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
-      <ProjectList/>
+              <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+              <h1 class="h2">Mes Projets</h1>
+              </div>
+
+              <ProjectList/>
       
-      <Form/>
-    </main>
+              <Forms/>
+
+            </main>
+        </div>
   </div>
-</div>
 
 </main>
 </template>
 
-<style scoped>
+<style>
 .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;

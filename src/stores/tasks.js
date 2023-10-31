@@ -5,5 +5,26 @@ export const useTasksStore = defineStore( 'tasks', {
         return {
             tasks: [],
         }
+    },
+
+    getters: {
+        completedTasks(state){
+            return state.tasks.filter( task => task.completed).length;
+        },
+        pendingTasks(state){
+            return this.tasks.length - this.completedTasks;
+        },
+        totalTasks(state){
+            return state.tasks.length;
+        }
+    },
+
+    actions: {
+        deleteTask(id){
+            if(confirm('Confirmez vous la suppression ? ')){
+                this.tasks = this.tasks.filter(task => task.id != id);
+            }
+            
+        }
     }
 })

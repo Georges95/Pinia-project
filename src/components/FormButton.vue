@@ -1,10 +1,4 @@
-<template>
-        <div class="col-auto">
-          <button class="btn btn-primary mb-3">{{ props.buttonText }}</button>
-        </div>
-</template>
-
-<script>
+<script setup>
 const props = defineProps ({
     buttonText: {
         type: String,
@@ -14,6 +8,11 @@ const props = defineProps ({
     
 </script>
 
-<style scoped>
+<template>
+        <div class="col-auto">
+          <button class="btn btn-primary mb-3">{{ props.buttonText }}</button>
+        </div>
+</template>
 
-</style>
+
+
