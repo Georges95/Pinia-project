@@ -1,28 +1,19 @@
 <script setup>
     import FormButton from './FormButton.vue';
-
     import { uuid } from 'vue-uuid';
-
     import { useTasksStore } from '../stores/tasks';
-
     import{ ref, reactive } from 'vue';
 
     const tasksStore = useTasksStore();
-    //console.log(tasksStore);
-    //tasksStore.tasks.push({
-    //    id: 1,
-    //    name: 'description de la tache 1 ',
-    //    completed: false
-    //});
-    
+        
     const id = ref('')
     const name = ref('')
     const description = ref('')
     const completed = ref('')
 
     const errors = reactive({
-      name: 'false',
-      description: 'false',
+      name: false,
+      description: false,
     })
 
     const handleSubmit = () => {

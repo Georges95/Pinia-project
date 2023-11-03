@@ -5,13 +5,12 @@
 </script>
 
 <template>
-
     <div class="card" 
       v-for="task in tasksStore.tasks"
       :key="task.id">
         <div class="card-body" :class="{done: task.completed}">
           <div class="form-check form-switch">
-            <label for="task.id"></label>
+            <label :for="task.id"></label>
             <input 
             v-model="task.completed"
             :id="task.id"
